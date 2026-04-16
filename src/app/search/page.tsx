@@ -1,10 +1,11 @@
-import React from 'react';
+'use client';
 
-export default async function SearchPage(props: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-}) {
-  const searchParams = await props.searchParams;
-  const query = searchParams.q || '';
+import { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+
+function SearchResults() {
+  const searchParams = useSearchParams();
+  const query = searchParams.get('q') || '';
 
   return (
     <main className="container" style={{ padding: '80px 24px', minHeight: '60vh' }}>
@@ -13,8 +14,16 @@ export default async function SearchPage(props: {
       </div>
       <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--primary)' }}>Search Results</h1>
       <p style={{ color: 'var(--text-muted)' }}>
-        Menampilkan hasil pencarian untuk: <strong>"{query}"</strong>
+        Menampilkan hasil pencarian untuk: <strong>&quot;{query}&quot;</strong>
       </p>
     </main>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<main style={{ padding: '80px 24px', minHeight: '60vh' }}>Loading...</main>}>
+      <SearchResults />
+    </Suspense>
   );
 }
