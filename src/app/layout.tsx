@@ -16,9 +16,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Website SEO Title",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  keywords: "lorem, ipsum, dolor, sit, amet, nextjs, website",
+  title: "PM Premier Consulting",
+  description: "PM Premier Consulting is a leading provider of high-quality consulting services to businesses of all sizes. We specialize in helping our clients achieve their goals through strategic planning, operational excellence, and innovative solutions.",
+  keywords: "PM Premier Consulting, consulting services, strategic planning, operational excellence, innovative solutions",
   robots: {
     index: true,
     follow: true,
