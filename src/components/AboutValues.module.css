@@ -1,0 +1,121 @@
+.section {
+  width: 100%;
+  padding: 80px 0 120px 0;
+  background-color: #FFFFFF; /* Changed from lavender to white to alternate better */
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px; /* Must perfectly match the 1280px of Navbar and AboutStory to keep the page laser-aligned */
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(11, 14, 42, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.card {
+  padding: 3rem 1rem; /* Reduced horizontal padding to fit 7 columns cleanly in 1280px */
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.card:hover {
+  background-color: var(--primary);
+}
+
+.letter {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.card:hover .cardTitle {
+  color: var(--accent);
+}
+
+.cardBody {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.card:hover .cardBody {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+  .card:nth-child(4n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    border-right: none;
+  }
+}

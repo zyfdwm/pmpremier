@@ -1,0 +1,126 @@
+.ctaSection {
+  width: 100%;
+  padding: 0 0 120px 0;
+  background-color: #FFFFFF;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.banner {
+  background-color: #23224B;
+  border-radius: 8px;
+  padding: 4rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(35, 34, 75, 0.15);
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.content h2 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.action {
+  position: relative;
+  z-index: 2;
+}
+
+.primaryBtn {
+  background-color: #BA9666;
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.primaryBtn:hover {
+  background-color: #927552;
+  transform: translateY(-2px);
+}
+
+.graphicOverlay {
+  position: absolute;
+  right: 18%;
+  bottom: -30%;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.chevronLarge,
+.chevronSmall {
+  position: absolute;
+  border-right: 20px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 20px solid rgba(255, 255, 255, 0.03);
+  transform: rotate(-45deg);
+}
+
+.chevronLarge {
+  width: 250px;
+  height: 250px;
+  top: 0;
+  left: 0;
+}
+
+.chevronSmall {
+  width: 150px;
+  height: 150px;
+  top: 50px;
+  left: 50px;
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .content h2 {
+    font-size: 2.25rem;
+  }
+
+  .primaryBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .graphicOverlay {
+    right: -10%;
+  }
+}

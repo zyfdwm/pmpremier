@@ -1,0 +1,140 @@
+.section {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #F9F9FB; /* Subtle off-white to make the bento grid pop */
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  margin-bottom: 3.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Bento Grid System */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 320px);
+  gap: 1.5rem;
+  grid-template-areas: 
+    "taxes education education"
+    "taxes audit compliance";
+}
+
+.card {
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.cardTaxes { grid-area: taxes; background-color: #F3F1F6; }
+.cardEducation { grid-area: education; background-color: #E4F0E8; }
+.cardAudit { grid-area: audit; background-color: #FBD6A8; }
+.cardCompliance { grid-area: compliance; background-color: #E2E0F2; }
+
+.iconArea {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  opacity: 0.8;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.cardBody {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Adjust text for Audit which is usually on darker/colored background */
+.cardAudit .cardBody, .cardAudit .cardTitle {
+  color: #5D432C; /* Darker tone for better contrast on peach */
+}
+
+/* Taxes bullet point style as seen in screenshot */
+.bulletList {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.bulletMark {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
+  border-radius: 1px;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "taxes education"
+      "taxes education"
+      "audit compliance";
+    grid-template-rows: auto;
+  }
+  .card {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "taxes"
+      "education"
+      "audit"
+      "compliance";
+  }
+  .title { font-size: 2rem; }
+}

@@ -1,0 +1,98 @@
+.section {
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--background);
+  min-height: calc(100vh - 80px); /* Fill screen gracefully */
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center; /* This Perfectly center-aligns the text block alongside the image! */
+  gap: 6rem;
+}
+
+.content {
+  flex: 1;
+  max-width: 580px;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.headline {
+  font-size: 3.5rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.subheadline {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 550px;
+  aspect-ratio: 1/1; /* Forces perfectly square proportions as requested */
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(11, 14, 42, 0.08);
+}
+
+.image {
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .headline {
+    font-size: 2.75rem;
+  }
+  .container {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+    align-items: flex-start;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .headline {
+    font-size: 2.25rem;
+  }
+  
+  .imageColumn {
+    width: 100%;
+    justify-content: center;
+  }
+}

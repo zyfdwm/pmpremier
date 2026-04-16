@@ -1,0 +1,86 @@
+.section {
+  width: 100%;
+  padding: 80px 0 40px 0;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.content {
+  max-width: 900px;
+}
+
+.eyebrowWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.line {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(186, 150, 102, 0.4); /* Subtle gold line */
+}
+
+.date {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.headline {
+  font-size: 4.5rem;
+  line-height: 1.05;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.03em;
+}
+
+.highlight {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.subheadline {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 700px;
+}
+
+@media (max-width: 1024px) {
+  .headline {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 100px 0 60px 0;
+    min-height: auto;
+  }
+  .headline {
+    font-size: 2.75rem;
+  }
+  .subheadline {
+    font-size: 1.125rem;
+  }
+}
