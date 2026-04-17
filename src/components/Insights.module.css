@@ -1,6 +1,6 @@
 .insightsSection {
   width: 100%;
-  padding: 100px 0;
+  padding: var(--space-xl) 0;
   background-color: #FFFFFF;
 }
 
@@ -24,7 +24,7 @@
 
 .headline {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--primary);
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
@@ -37,7 +37,7 @@
 }
 
 .viewAll {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   color: var(--accent);
@@ -99,7 +99,7 @@
 
 .category {
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.08em;
   margin-bottom: 1rem;
@@ -108,7 +108,7 @@
 
 .title {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--primary);
   line-height: 1.4;
   margin-bottom: 1.5rem;

@@ -24,7 +24,7 @@
 
 .headline {
   font-size: 2.75rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--primary);
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
@@ -122,14 +122,14 @@
 
 .name {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--primary);
   margin-bottom: 0.4rem;
 }
 
 .role {
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;

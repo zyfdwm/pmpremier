@@ -1,7 +1,8 @@
-.section {
+.heroSection {
   width: 100%;
-  padding: 80px 0 40px 0;
-  background-color: #FFFFFF;
+  padding: var(--space-xl) 0 3rem 0;
+  background-color: var(--background);
+  min-height: 50vh;
   display: flex;
   align-items: center;
 }
@@ -46,12 +47,12 @@
 }
 
 .headline {
-  font-size: 4.5rem;
-  line-height: 1.05;
-  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 1.15;
+  font-weight: 700;
   color: var(--primary);
-  margin-bottom: 2.5rem;
-  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
 .highlight {

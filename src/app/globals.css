@@ -6,6 +6,15 @@
   --accent-light: #F0EAE1;
   --text-muted: #5A5D75;
   --border: #E5E7EB;
+
+  /* Golden Ratio / Fibonacci Spacing (8px base) */
+  --space-2xs: 0.5rem;  /* 8px */
+  --space-xs: 1rem;     /* 16px */
+  --space-s: 1.5rem;    /* 24px */
+  --space-m: 2.5rem;    /* 40px */
+  --space-l: 4rem;      /* 64px */
+  --space-xl: 6.5rem;   /* 104px */
+  --space-2xl: 10.5rem; /* 168px */
 }
 
 * {
@@ -57,6 +66,15 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+input, select, textarea, option {
+  font-family: var(--font-body), inherit;
+  color: inherit;
+}
+
+::placeholder {
+  font-family: var(--font-body), inherit;
 }
 
 /* Page Transition Animation */

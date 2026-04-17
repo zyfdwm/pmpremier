@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  padding: 100px 0;
+  padding: var(--space-xl) 0;
   background-color: #0B0E2A; /* Match the screenshot's very dark navy */
   min-height: calc(100vh - 80px); /* Aligned with other heroes for consistency */
   position: relative;
@@ -37,12 +37,12 @@
 }
 
 .headline {
-  font-size: 4.5rem;
-  line-height: 1.1;
-  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 1.15;
+  font-weight: 700;
   color: #FFFFFF;
   margin-bottom: 2rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 .highlight {

@@ -37,7 +37,15 @@
 }
 
 .logo strong {
-  font-weight: 800;
+  font-weight: 700;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .navLinks {
@@ -127,13 +135,117 @@
   background-color: #1A1F45;
 }
 
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+}
+
+.menuToggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.menuOpen span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menuOpen span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.menuOpen span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 @media (max-width: 1024px) {
+  .menuToggle {
+    display: flex;
+  }
+
+  .navContent {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+    gap: 3rem;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+  }
+
+  .showMenu {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
   .navLinks {
-    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    gap: 1.5rem;
+  }
+
+  .navLinks li {
+    width: 100%;
+  }
+
+  .navLinks a {
+    font-size: 1.25rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .searchBox {
+    width: 100%;
+    background-color: #F3F4F6;
+  }
+
+  .searchBox input {
+    width: 100%;
+  }
+
+  .contactBtn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
   }
 }
+
 @media (max-width: 768px) {
-  .searchBox {
-    display: none;
+  .logo a {
+    font-size: 1.15rem;
   }
 }
