@@ -13,6 +13,7 @@ interface FilterState {
 interface RegulationSidebarProps {
   filters: FilterState;
   onFilterChange: (filters: FilterState) => void;
+  isOpen?: boolean;
 }
 
 const CATEGORIES = [
@@ -29,7 +30,7 @@ const INSTRUMENT_TYPES = [
   { id: 'se', label: 'Circular Letter (SE)' },
 ];
 
-export default function RegulationSidebar({ filters, onFilterChange }: RegulationSidebarProps) {
+export default function RegulationSidebar({ filters, onFilterChange, isOpen }: RegulationSidebarProps) {
   const handleCategoryToggle = (id: string) => {
     const newCategories = filters.categories.includes(id)
       ? filters.categories.filter(c => c !== id)
@@ -53,7 +54,7 @@ export default function RegulationSidebar({ filters, onFilterChange }: Regulatio
   };
 
   return (
-    <aside className={styles.sidebar}>
+    <aside className={`${styles.sidebar} ${isOpen ? styles.sidebarActive : ''}`}>
       <div className={styles.sidebarTitle}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <line x1="4" y1="21" x2="4" y2="14"></line>

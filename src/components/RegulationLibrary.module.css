@@ -18,6 +18,7 @@
   border: 1px solid #eee;
   position: sticky;
   top: 100px;
+  transition: all 0.3s ease;
 }
 
 .sidebarTitle {
@@ -141,6 +142,7 @@
   margin-bottom: 32px;
   padding-bottom: 24px;
   border-bottom: 1px solid #eee;
+  gap: 16px;
 }
 
 .resultsInfo h2 {
@@ -249,7 +251,7 @@
 
 .regInfo {
   display: inline-block;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .regTitle {
@@ -299,6 +301,80 @@
   
   .sidebar {
     position: static;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .librarySection {
+    padding: var(--space-l) 0;
+  }
+
+  .sidebar {
+    padding: 24px;
+    display: none; /* Will be toggled by JS */
+  }
+
+  .sidebarActive {
+    display: block !important;
+  }
+
+  .mobileFilterToggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    background: #0b0e2a;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .resultsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sortGroup {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .sortSelect {
+    flex: 1;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .meta {
+    text-align: left;
+    width: 100%;
+  }
+
+  .regTitle {
+    font-size: 1.25rem;
+  }
+
+  .cardActions {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 8px;
   }
 }
 
