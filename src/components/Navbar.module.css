@@ -26,18 +26,32 @@
   padding: 0 24px;
 }
 
-.logo a {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--primary);
+.logoWrapper {
   display: flex;
   align-items: center;
-  letter-spacing: -0.02em;
 }
 
-.logo strong {
-  font-weight: 700;
+.logoDesktop {
+  display: block;
+  height: auto;
+  width: auto;
+  max-height: 40px;
+}
+
+.logoMobile {
+  display: none;
+  height: auto;
+  width: auto;
+  max-height: 36px;
+}
+
+@media (max-width: 768px) {
+  .logoDesktop {
+    display: none;
+  }
+  .logoMobile {
+    display: block;
+  }
 }
 
 .navContent {

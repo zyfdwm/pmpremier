@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -10,7 +11,15 @@ export default function Footer() {
           {/* Column 1 - Brand */}
           <div className={styles.brandCol}>
             <div className={styles.logo}>
-              <strong>PM</strong> Premier
+              <Link href="/">
+                <Image 
+                  src="/logo-desktop.png" 
+                  alt="PM Premier" 
+                  width={180} 
+                  height={40} 
+                  className={styles.footerLogo}
+                />
+              </Link>
             </div>
             <p className={styles.description}>
               Bespoke consultancy for those who demand precision and strategy in their financial operations.

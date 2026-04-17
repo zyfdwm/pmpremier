@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -38,7 +39,24 @@ export default function Navbar() {
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">
-            <strong>PM</strong>Premier
+            <div className={styles.logoWrapper}>
+              <Image 
+                src="/logo-desktop.png" 
+                alt="PM Premier" 
+                width={180} 
+                height={40} 
+                priority
+                className={styles.logoDesktop}
+              />
+              <Image 
+                src="/logo-mobile.png" 
+                alt="PM Premier" 
+                width={40} 
+                height={40} 
+                priority
+                className={styles.logoMobile}
+              />
+            </div>
           </Link>
         </div>
         

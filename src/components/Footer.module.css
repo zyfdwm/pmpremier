@@ -25,16 +25,17 @@
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 500;
   margin-bottom: 1.25rem;
-  color: #FFFFFF;
-  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
 }
 
-.logo strong {
-  font-weight: 700;
+.footerLogo {
+  height: auto;
+  width: auto;
+  max-height: 40px;
+  /* Applying brightness filter to make it look clean on dark background if needed, 
+     but assuming the logo and desktop version handles this. */
 }
 
 .description {
